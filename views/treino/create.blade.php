@@ -10,20 +10,15 @@
 
 <h2> Criar Treino </h2>
 <hr>
-
-<div class="container">
+    <div class="card"> 
     <form action="{{route('treino.store')}}" method="POST">
         @csrf      
-        <div class="fonte">
-        <div class="column1"> 
+        
             <label for="init_date"> Data de início </label> <br>
             <input type="date" name="init_date" id="init_date" required> <br>
 
             <label for="end_date"> Data de término </label> <br>
             <input type="date" name="end_date" id="end_date" required> <br>
-        </div>
-
-        <div class="column2">
             <label for="name"> Nome </label> <br>
             <input type="text" name="name" id="name" required> <br>
 
@@ -31,12 +26,11 @@
             <input type="text" name="description" id="description" required> <br>
             
             <input type="hidden" value="{{$aluno->id}}" name="id_aluno" id="id_aluno">
-        </div>
-            <button type="submit"> Cadastrar </button>
-        </div>
+            <br>
+            <button class="button-cadastrar" type="submit"> Cadastrar </button>
+       
 
     </form>
-
-</div>
+ </div>
 
 </x-layout>
